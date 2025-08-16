@@ -1,15 +1,11 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
 int main()
 {
-
     int bispo = 0;
     int torre = 0;
-    int rainha = 0;
+    int rainha = 0; 
+    int cavalo = 1;
 
     do
     {
@@ -26,6 +22,13 @@ int main()
     for (rainha; rainha <= 8; rainha++)
     {
         printf("A Rainha andou %d para esquerda\n", rainha);
+    }
+
+    while (cavalo--) {
+        for (int i = 0; i < 2; i++){
+            printf("cima\n");
+        }
+        printf("direita\n");
     }
 
     return 0;
