@@ -1,30 +1,45 @@
 #include <stdio.h>
 
+void recursivoTorre(int n)
+{
+    if (n > 0)
+    {
+        printf("direita\n");
+        recursivoTorre(n - 1);
+    }
+}
+
+void recursivoBispo(int n)
+{
+    if (n > 0)
+    {
+        printf("direita cima\n");
+        recursivoBispo(n - 1);
+    }
+}
+
+void recursivoRainha(int n){
+    if(n > 0){
+        printf("esquerda\n");
+        recursivoRainha(n -1);
+    }
+}
+
 int main()
 {
-    int bispo = 0;
-    int torre = 0;
-    int rainha = 0; 
     int cavalo = 1;
 
-    do
-    {
-        printf("O Bispo andou %d para direita cima\n", bispo);
-        bispo++;
-    } while (bispo <= 5);
+    printf("A torre andou para: \n");
+    recursivoTorre(5);
 
-    while (torre <= 5)
-    {
-        printf("A Torre andou %d para direita\n", torre);
-        torre++;
-    }
+    printf("O bispo andou para: \n");
+    recursivoBispo(5);
 
-    for (rainha; rainha <= 8; rainha++)
-    {
-        printf("A Rainha andou %d para esquerda\n", rainha);
-    }
+    printf("A rainha andou para: \n");
+    recursivoRainha(8);
 
     while (cavalo--) {
+        printf("Cavalo andou: \n");
         for (int i = 0; i < 2; i++){
             printf("cima\n");
         }
